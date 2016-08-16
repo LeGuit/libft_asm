@@ -6,7 +6,7 @@
 #    By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/16 14:16:17 by gwoodwar          #+#    #+#              #
-#    Updated: 2016/08/16 14:24:45 by gwoodwar         ###   ########.fr        #
+#    Updated: 2016/08/16 14:38:44 by gwoodwar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,16 @@ CC =			gcc
 TEST_NAME =		test
 TEST_FLAGS =	-Wall -Werror -Wextra
 
-LIST =
+LIST =	ft_bzero \
+		ft_strcat \
+		ft_isalpha \
+		ft_isdigit \
+		ft_isalnum \
+		ft_isascii \
+		ft_isprint \
+		ft_toupper \
+		ft_tolower \
+		ft_puts
 
 SRCS := $(addprefix $(SRCS_DIR)/, $(addsuffix .s, $(LIST)))
 OBJS := $(addprefix $(OBJS_DIR)/, $(addsuffix .o, $(LIST)))
