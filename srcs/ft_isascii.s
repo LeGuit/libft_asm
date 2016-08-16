@@ -6,11 +6,11 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/16 18:02:21 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/16 18:05:58 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/16 18:53:31 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
-.ft_isascii:
+ft_isascii:
 	mov		esi, 0
 	mov		edx, 127
 	call	ft_is_in_range

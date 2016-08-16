@@ -6,7 +6,7 @@
 #    By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/16 14:16:17 by gwoodwar          #+#    #+#              #
-#    Updated: 2016/08/16 14:38:44 by gwoodwar         ###   ########.fr        #
+#    Updated: 2016/08/16 18:56:36 by gwoodwar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ OBJS_DIR =		objs
 CC =			gcc
 TEST_NAME =		test
 TEST_FLAGS =	-Wall -Werror -Wextra
-
-LIST =	ft_bzero \
+ASM_FLAGS =		-f macho
+LIST =	ft_is_in_range \
 		ft_strcat \
 		ft_isalpha \
 		ft_isdigit \
@@ -27,7 +27,12 @@ LIST =	ft_bzero \
 		ft_isprint \
 		ft_toupper \
 		ft_tolower \
-		ft_puts
+		ft_bzero \
+		ft_puts \
+		ft_strlen \
+		ft_memset \
+		ft_memcpy \
+		ft_strdup
 
 SRCS := $(addprefix $(SRCS_DIR)/, $(addsuffix .s, $(LIST)))
 OBJS := $(addprefix $(OBJS_DIR)/, $(addsuffix .o, $(LIST)))
@@ -42,7 +47,7 @@ $(NAME): $(OBJS)
 
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.s
 	mkdir -p $(dir $@)
-	$(CC) $(INCLS) -o $@ -c $<
+	$(ASM) $(ASM_FLAGS) -o $@ $<
 
 clean:
 	/bin/rm -rf $(OBJS_DIR)

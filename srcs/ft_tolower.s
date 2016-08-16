@@ -6,11 +6,11 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/16 17:42:20 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/16 18:17:30 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/16 18:53:40 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
-.ft_tolower:
+ft_tolower:
 	je		.ret
 	mov		esi, 'A'
 	mov		edx, 'Z'

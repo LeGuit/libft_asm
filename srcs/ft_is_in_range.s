@@ -6,16 +6,15 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/16 14:49:53 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/16 15:12:48 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/16 18:54:03 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
-;int				ft_is_in_range(int c, int from, int to);
 global	ft_is_in_range
 
-.ft_is_in_range:
+ft_is_in_range:
 	cmp	esi, edx
-	jg	to_from
+	jg	.to_from
 
 .from_to:
 	cmp	edi, esi

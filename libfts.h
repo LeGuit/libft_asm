@@ -6,7 +6,7 @@
 /*   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/16 14:40:05 by gwoodwar          #+#    #+#             */
-/*   Updated: 2016/08/16 15:09:10 by gwoodwar         ###   ########.fr       */
+/*   Updated: 2016/08/16 18:38:57 by gwoodwar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,9 @@
 */
 
 /*
-** Primary functions
+** Part 1 - functions
 */
+
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
@@ -49,10 +50,25 @@ int				ft_is_in_range(int c, int from, int to);
 
 int				ft_toupper(int c);
 int				ft_tolower(int c);
-int				ft_puts
+int				ft_puts(const char *s);
 
 void			ft_bzero(void *s, size_t n);
 char			*ft_strcat(char *s1, const char *s2);
 
+/*
+** Part 2 - functions
+*/
 
+size_t			ft_strlen(const char *str);
+void			*ft_memset(void *b, int c, size_t len);
+void			*ft_memcpy(void *dst, const void *src, size_t n);
+char			*ft_strdup(const char *s1);
+
+/*
+** Part 3 - Cat
+*/
+
+/*
+** Bonuses
+*/
 #endif
