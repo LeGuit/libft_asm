@@ -6,7 +6,7 @@
 #    By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/16 14:16:17 by gwoodwar          #+#    #+#              #
-#    Updated: 2016/08/16 18:56:36 by gwoodwar         ###   ########.fr        #
+#    Updated: 2016/08/17 16:26:29 by gwoodwar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ OBJS_DIR =		objs
 CC =			gcc
 TEST_NAME =		test
 TEST_FLAGS =	-Wall -Werror -Wextra
-ASM_FLAGS =		-f macho
+ASM_FLAGS =		-f macho64
 LIST =	ft_is_in_range \
 		ft_strcat \
 		ft_isalpha \

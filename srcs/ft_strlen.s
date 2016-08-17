@@ -1,18 +1,17 @@
 ;; ************************************************************************** ;;
 ;;                                                                            ;;
 ;;                                                        :::      ::::::::   ;;
-;;   ft_isascii.s                                       :+:      :+:    :+:   ;;
+;;   ft_strlen.s                                        :+:      :+:    :+:   ;;
 ;;                                                    +:+ +:+         +:+     ;;
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
-;;   Created: 2016/08/16 18:02:21 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/17 16:26:47 by gwoodwar         ###   ########.fr       ;;
+;;   Created: 2016/08/17 14:39:34 by gwoodwar          #+#    #+#             ;;
+;;   Updated: 2016/08/17 17:24:33 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
-extern		ft_is_in_range
+global 		ft_strlen
 
-ft_isascii:
-	mov		esi, 0
-	mov		edx, 127
-	call	ft_is_in_range
+ft_strlen:
+	push	edi
+	

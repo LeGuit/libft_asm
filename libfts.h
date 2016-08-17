@@ -6,7 +6,7 @@
 /*   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/16 14:40:05 by gwoodwar          #+#    #+#             */
-/*   Updated: 2016/08/16 18:38:57 by gwoodwar         ###   ########.fr       */
+/*   Updated: 2016/08/17 15:48:16 by gwoodwar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
-int				ft_is_in_range(int c, int from, int to);
 
 int				ft_toupper(int c);
 int				ft_tolower(int c);
@@ -71,4 +70,7 @@ char			*ft_strdup(const char *s1);
 /*
 ** Bonuses
 */
+
+int				ft_is_in_range(int c, int from, int to);
+
 #endif
