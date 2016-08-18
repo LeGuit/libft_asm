@@ -6,14 +6,14 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/17 14:39:34 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/17 18:06:40 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/18 14:24:00 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
 global 		ft_strlen
 
 ft_strlen:
-	push	edi
+	push	rdi
 	sub		ecx, ecx
 	not		ecx
 	mov		edi,[esp+8]
@@ -21,5 +21,6 @@ ft_strlen:
 	cld						;to read from lowest to highest adress
 	repne	scasb			;count till al
 	not		ecx
+	pop		rdi
 	lea		eax, [ecx-1]	;sub the count of the '\0'
 	ret
