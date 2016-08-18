@@ -1,12 +1,12 @@
 ;; ************************************************************************** ;;
 ;;                                                                            ;;
 ;;                                                        :::      ::::::::   ;;
-;;   ft_strlen.s                                        :+:      :+:    :+:   ;;
+;;   ft_strlen_c.s                                      :+:      :+:    :+:   ;;
 ;;                                                    +:+ +:+         +:+     ;;
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
-;;   Created: 2016/08/17 14:39:34 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/18 16:44:50 by gwoodwar         ###   ########.fr       ;;
+;;   Created: 2016/08/18 14:35:06 by gwoodwar          #+#    #+#             ;;
+;;   Updated: 2016/08/18 14:36:14 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
@@ -14,13 +14,14 @@ global 		ft_strlen
 
 ft_strlen:
 	push	rdi
-	sub		rcx, rcx
-	not		rcx
-	mov		rdi,[rsp+8]
+	sub		ecx, ecx
+	not		ecx
+	mov		edi,[esp+8]
 	sub		al, al			;put '\0' value for end of count
+	add		al, esi			;add second argument value to stop the count
 	cld						;to read from lowest to highest adress
 	repne	scasb			;count till al
-	not		rcx
+	not		ecx
 	pop		rdi
-	lea		rax, [ecx-1]	;sub the count of the '\0'
+	lea		eax, [ecx-1]	;sub the count of the '\0'
 	ret

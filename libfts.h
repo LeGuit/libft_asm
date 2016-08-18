@@ -6,7 +6,7 @@
 /*   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/16 14:40:05 by gwoodwar          #+#    #+#             */
-/*   Updated: 2016/08/17 15:48:16 by gwoodwar         ###   ########.fr       */
+/*   Updated: 2016/08/18 16:41:00 by gwoodwar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,6 @@ char			*ft_strdup(const char *s1);
 */
 
 int				ft_is_in_range(int c, int from, int to);
+size_t			ft_strlen_c(const char *str, int c);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/16 14:16:17 by gwoodwar          #+#    #+#              #
-#    Updated: 2016/08/17 16:26:29 by gwoodwar         ###   ########.fr        #
+#    Updated: 2016/08/18 14:36:30 by gwoodwar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ LIST =	ft_is_in_range \
 		ft_bzero \
 		ft_puts \
 		ft_strlen \
+		ft_strlen_c \
 		ft_memset \
 		ft_memcpy \
 		ft_strdup

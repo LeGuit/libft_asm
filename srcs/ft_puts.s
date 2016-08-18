@@ -6,10 +6,40 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/17 14:34:07 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/17 14:39:17 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/18 16:26:23 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
-nl		db	10
+extern		ft_strlen
+
+section .data
+	nl			db	10
+	
 
 ft_puts:
+	push	rdi			;to save from strlen
+	call	ft_strlen
+	pop		rdi			;restore after strlen
+	cmp		rax, 0
+	je		.print_nl
+
+.print_string:
+	mov		rsi, rdi	;move str to arg 2
+	mov		rdx, rax	;strlen to arg 3
+	mov		rdi, 1		;fd 1 to arg 1
+	mov		rax, 1		;syscall for write
+	syscall
+
+.print_nl:
+	mov		rsi, nl
+	mov		rdx, 1
+	mov		rdi, 1
+	mov		rax, 1
+	syscall
+
+.error:
+	cmp		rax, 
+	mov		rax, -1
+
+.ret
+	ret
