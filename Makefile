@@ -6,7 +6,7 @@
 #    By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/16 14:16:17 by gwoodwar          #+#    #+#              #
-#    Updated: 2016/08/18 14:36:30 by gwoodwar         ###   ########.fr        #
+#    Updated: 2016/08/18 16:55:37 by gwoodwar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,9 +40,6 @@ OBJS := $(addprefix $(OBJS_DIR)/, $(addsuffix .o, $(LIST)))
 
 all: $(NAME)
 
-test: $(NAME)
-	$(CC) $(TEST_FLAGS) -o $(TEST_NAME) main.c
-
 $(NAME): $(OBJS)
 	ln -sf $@
 
@@ -50,13 +47,16 @@ $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.s
 	mkdir -p $(dir $@)
 	$(ASM) $(ASM_FLAGS) -o $@ $<
 
+$(TEST_NAME): $(NAME)
+	$(CC) $(TEST_FLAGS) -o $(TEST_NAME) -L./$^ -lft
+
 clean:
 	/bin/rm -rf $(OBJS_DIR)
 
 fclean: clean
 	/bin/rm -f $(NAME)
-	/bin/rm -f $(test)
+	/bin/rm -f $(TEST_NAME)
 
 re: fclean all
 
-.PHONY: re clean fclean all
+.PHONY: re clean fclean all test
