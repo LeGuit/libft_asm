@@ -6,11 +6,12 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/16 18:16:59 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/22 17:31:01 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/22 19:14:56 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
 extern		ft_is_in_range
+global		ft_toupper
 
 ft_toupper:
 	mov		esi, 'a'

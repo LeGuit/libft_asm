@@ -6,12 +6,13 @@
 /*   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/16 14:40:05 by gwoodwar          #+#    #+#             */
-/*   Updated: 2016/08/18 16:41:00 by gwoodwar         ###   ########.fr       */
+/*   Updated: 2016/08/22 18:23:26 by gwoodwar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBTFS_H
 # define LIBTFS_H
+# include <stddef.h>
 
 /* Instruction ASM
 ** ;64				32			16		[8	8]

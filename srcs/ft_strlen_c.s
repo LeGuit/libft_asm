@@ -6,11 +6,11 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/18 14:35:06 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/22 17:29:45 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/22 19:14:45 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
-global 		ft_strlen
+global 		ft_strlen_c
 
 ft_strlen:
 	enter	0, 0

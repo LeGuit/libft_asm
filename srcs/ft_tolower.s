@@ -6,11 +6,12 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/16 17:42:20 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/22 17:30:12 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/22 19:14:51 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
 extern		ft_is_in_range
+global		ft_tolower
 
 ft_tolower:
 	enter	0, 0

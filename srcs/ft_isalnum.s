@@ -6,12 +6,13 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/16 18:00:02 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/22 17:30:34 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/22 19:13:52 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
 extern		ft_isalpha
 extern		ft_isdigit
+global		ft_isalnum
 
 prologue:
 	enter	0, 0

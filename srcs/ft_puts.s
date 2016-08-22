@@ -6,11 +6,12 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/17 14:34:07 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/22 17:29:05 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/22 19:14:23 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
 extern		ft_strlen
+global		ft_puts
 
 section .data
 	nl			db	10

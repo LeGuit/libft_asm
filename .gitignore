@@ -7,6 +7,7 @@ libft/
 *.class
 *.com
 *.pyc
+test
 
 #libfts
 libfts.a
