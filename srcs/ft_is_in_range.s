@@ -6,27 +6,27 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/16 14:49:53 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/16 18:54:03 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/22 17:24:40 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
 global	ft_is_in_range
 
 ft_is_in_range:
-	cmp	esi, edx
+	cmp	rsi, rdx
 	jg	.to_from
 
 .from_to:
-	cmp	edi, esi
+	cmp	rdi, rsi
 	jl	.false
-	cmp	edi, edx
+	cmp	rdi, rdx
 	jg	.false
 	jmp .true
 
 .to_from:
-	cmp	edi, edx
+	cmp	rdi, rdx
 	jg	.false
-	cmp	edi, esi
+	cmp	rdi, rsi
 	jl	.false
 
 .true:

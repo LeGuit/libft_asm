@@ -6,13 +6,24 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/16 18:28:14 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/17 16:36:49 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/22 16:51:57 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
-extern		ft_memset
+;;void		ft_bzero(void *s, size_t n)
 
 ft_bzero:
-	mov		edx, esi
-	mov		esi, 0x00
-	call	ft_memset
+	enter	0, 0
+	sub		rcx, rcx
+
+loop:
+	cmp		rsi, 0
+	je		.ret
+	mov		rdi, rcx
+	inc		rdi
+	dec		rsi
+	jmp		loop
+
+.ret:
+	leave
+	ret

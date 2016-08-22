@@ -6,7 +6,7 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/17 14:34:07 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/18 17:05:09 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/22 16:16:26 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
@@ -15,7 +15,6 @@ extern		ft_strlen
 section .data
 	nl			db	10
 	
-
 ft_puts:
 	push	rdi			;to save from strlen
 	call	ft_strlen
