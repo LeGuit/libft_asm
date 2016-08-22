@@ -6,13 +6,16 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/16 18:02:21 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/17 16:26:47 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/22 17:28:16 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
 extern		ft_is_in_range
 
 ft_isascii:
+	enter	0, 0
 	mov		esi, 0
 	mov		edx, 127
 	call	ft_is_in_range
+	leave
+	ret

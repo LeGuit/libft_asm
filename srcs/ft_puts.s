@@ -6,7 +6,7 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/17 14:34:07 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/22 16:16:26 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/22 17:29:05 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
@@ -16,6 +16,7 @@ section .data
 	nl			db	10
 	
 ft_puts:
+	enter	0, 0
 	push	rdi			;to save from strlen
 	call	ft_strlen
 	pop		rdi			;restore after strlen
@@ -35,4 +36,5 @@ ft_puts:
 	mov		rdi, 1
 	mov		rax, 1
 	syscall
+	leave
 	ret

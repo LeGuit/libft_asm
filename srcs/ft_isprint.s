@@ -6,13 +6,16 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/16 17:39:59 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/16 18:53:36 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/22 17:28:46 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
 extern		ft_is_in_range
 
 ft_isprint:
+	enter	0, 0
 	mov		esi, ' '
 	mov		edx, '~'
 	call	ft_is_in_range
+	leave
+	ret
