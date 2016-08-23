@@ -6,7 +6,7 @@
 /*   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 18:17:16 by gwoodwar          #+#    #+#             */
-/*   Updated: 2016/08/23 15:33:25 by gwoodwar         ###   ########.fr       */
+/*   Updated: 2016/08/23 16:14:40 by gwoodwar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,19 @@ int				main(void)
 	ft_puts("toto tata tutu");
 	ft_puts("");
 	ft_puts(NULL);
+
+	printf("\nTEST ft_bzero\n");
+	char		bzer[8] = "afiwm[i";
+
+	printf("\t%s\n", bzer);
+	ft_bzero(bzer, 7);
+	printf("\t%s\n", bzer); // add test
+
+	printf("\nTEST ft_strcat\n");
+	char		s1[9] = "toto";
+	char		s2[5] = "tutu";
+	char		*s;
+	s = ft_strcat(s1, s2);
+	printf("\ts1: %s\n\ts2: %s\n\tresult: %s\n", s1, s2, s);
 	return (0);
 }
