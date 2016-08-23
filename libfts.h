@@ -6,7 +6,7 @@
 /*   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/16 14:40:05 by gwoodwar          #+#    #+#             */
-/*   Updated: 2016/08/22 18:23:26 by gwoodwar         ###   ########.fr       */
+/*   Updated: 2016/08/23 19:05:27 by gwoodwar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ char			*ft_strdup(const char *s1);
 ** Part 3 - Cat
 */
 
+void			ft_cat(size_t fd);
 /*
 ** Bonuses
 */
