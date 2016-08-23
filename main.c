@@ -6,7 +6,7 @@
 /*   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 18:17:16 by gwoodwar          #+#    #+#             */
-/*   Updated: 2016/08/23 17:27:22 by gwoodwar         ###   ########.fr       */
+/*   Updated: 2016/08/23 17:42:41 by gwoodwar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,12 @@ int				main(void)
 		i++;
 	}
 	printf("\n");
+
+	char		memset[8] = "afiwm[i";
+
+	printf("\t%s\n", memset);
+	ft_memset(memset, '~', 7);
+	printf("\t%s\n", memset); // add test
+
 	return (0);
 }
