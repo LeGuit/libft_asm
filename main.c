@@ -6,7 +6,7 @@
 /*   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 18:17:16 by gwoodwar          #+#    #+#             */
-/*   Updated: 2016/08/23 16:14:40 by gwoodwar         ###   ########.fr       */
+/*   Updated: 2016/08/23 16:41:15 by gwoodwar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,13 @@ int				main(void)
 	char		*s;
 	s = ft_strcat(s1, s2);
 	printf("\ts1: %s\n\ts2: %s\n\tresult: %s\n", s1, s2, s);
+
+	printf("\nTEST ft_touplow\n");
+	i = 32;
+	while (i < 127)
+	{
+		printf("\tvalue: %c\ttoup: %c\ttolow: %c\n", i, ft_toupper(i), ft_tolower(i));
+		i++;
+	}
 	return (0);
 }
