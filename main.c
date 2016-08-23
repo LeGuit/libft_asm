@@ -6,13 +6,14 @@
 /*   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 18:17:16 by gwoodwar          #+#    #+#             */
-/*   Updated: 2016/08/23 17:42:41 by gwoodwar         ###   ########.fr       */
+/*   Updated: 2016/08/23 18:12:31 by gwoodwar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libfts.h"
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 int				main(void)
@@ -87,11 +88,20 @@ int				main(void)
 	}
 	printf("\n");
 
+	printf("\nTEST ft_memset\n");
 	char		memset[8] = "afiwm[i";
 
 	printf("\t%s\n", memset);
 	ft_memset(memset, '~', 7);
 	printf("\t%s\n", memset); // add test
+
+	printf("\nTEST ft_memcpy\n");
+	char		src[8] = "afiwm[i";
+	char		*dst = malloc(8);
+
+	printf("\t%s\n", src);
+	dst = ft_memcpy(dst, src, 8);
+	printf("\t%s\n", dst); // add test
 
 	return (0);
 }
