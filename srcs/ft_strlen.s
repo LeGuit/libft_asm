@@ -6,7 +6,7 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/17 14:39:34 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/22 16:35:18 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/23 14:07:15 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
@@ -18,7 +18,7 @@ ft_strlen:
 	push	rdi
 	sub		rcx, rcx
 	not		rcx
-	mov		rdi,[rsp + 8]
+	mov		rdi,[rsp]
 	sub		al, al			;put '\0' value for end of count
 	cld						;to read from lowest to highest adress
 	repne	scasb			;count till al
