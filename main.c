@@ -6,7 +6,7 @@
 /*   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 18:17:16 by gwoodwar          #+#    #+#             */
-/*   Updated: 2016/08/23 19:04:18 by gwoodwar         ###   ########.fr       */
+/*   Updated: 2016/08/23 20:09:23 by gwoodwar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ int				main(void)
 	printf("\tNULL -> %s\n", dup);
 
 	printf("\nTEST ft_cat\n");
-	ft_cat(-1);
+	ft_cat(0);
 	ft_cat(10);
 	return (0);
 }
