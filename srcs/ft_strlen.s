@@ -6,7 +6,7 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/17 14:39:34 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/23 14:07:15 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/23 17:16:01 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
@@ -15,6 +15,8 @@ global 		ft_strlen
 
 ft_strlen:
 	enter	0, 0
+	cmp		rdi, 0
+	je		.error
 	push	rdi
 	sub		rcx, rcx
 	not		rcx
@@ -25,5 +27,10 @@ ft_strlen:
 	not		rcx
 	pop		rdi
 	lea		rax, [rcx - 1]	;sub the count of the '\0'
+	leave
+	ret
+
+.error:
+	mov	rax, 0
 	leave
 	ret

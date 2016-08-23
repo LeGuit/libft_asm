@@ -6,12 +6,11 @@
 ;;   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        ;;
 ;;                                                +#+#+#+#+#+   +#+           ;;
 ;;   Created: 2016/08/18 17:42:29 by gwoodwar          #+#    #+#             ;;
-;;   Updated: 2016/08/22 19:14:17 by gwoodwar         ###   ########.fr       ;;
+;;   Updated: 2016/08/23 17:01:54 by gwoodwar         ###   ########.fr       ;;
 ;;                                                                            ;;
 ;; ************************************************************************** ;;
 
 ;void	*ft_memset(void *b, int c, size_t len);
-;use rep     stosb  rep repeat stosb store bytes
 global		ft_memset
 
 ft_memset:

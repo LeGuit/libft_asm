@@ -6,33 +6,34 @@
 /*   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 18:17:16 by gwoodwar          #+#    #+#             */
-/*   Updated: 2016/08/23 16:41:15 by gwoodwar         ###   ########.fr       */
+/*   Updated: 2016/08/23 17:27:22 by gwoodwar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libfts.h"
+
 #include <stdio.h>
+#include <string.h>
 
 int				main(void)
 {
-	char		test_is[8]= "1aB ~\n\t\0";
 	int			ret;
 	int			i = 0;
 
 	printf("TEST ft_is\n");
-	while (i < 8)
+	while (i < 128)
 	{
-		printf("\tvalue |%c|\n", test_is[i]);
-		ret = ft_isascii(test_is[i]);
-		printf("\tft_isascii return value %d\n", ret);
-		ret = ft_isalpha(test_is[i]);
-		printf("\tft_isalpha return value %d\n", ret);
-		ret = ft_isdigit(test_is[i]);
-		printf("\tft_isdigit return value %d\n", ret);
-		ret = ft_isprint(test_is[i]);
-		printf("\tft_isprint return value %d\n", ret);
-		ret = ft_isalnum(test_is[i]);
-		printf("\tft_isalnum return value %d\n", ret);
+		printf("\tvalue |%c| ", i);
+		ret = ft_isascii(i);
+		printf("\tft_isascii: %d ", ret);
+		ret = ft_isalpha(i);
+		printf("\tft_isalpha: %d ", ret);
+		ret = ft_isdigit(i);
+		printf("\tft_isdigit: %d ", ret);
+		ret = ft_isprint(i);
+		printf("\tft_isprint: %d ", ret);
+		ret = ft_isalnum(i);
+		printf("\tft_isalnum: %d\n", ret);
 		i++;
 	}
 	printf("\tvalue |128|\n");
@@ -46,6 +47,9 @@ int				main(void)
 	printf("\tft_strlen real value: 14 return value %d\n", ret);
 	ret = ft_strlen("");
 	printf("\tft_strlen real value: 0 return value %d\n", ret);
+	ret = ft_strlen(NULL);
+	printf("\tft_strlen real value: NULL return value %d\n", ret);
+
 	
 	printf("\nTEST ft_puts\n");
 	ft_puts("toto tata tutu");
@@ -64,14 +68,23 @@ int				main(void)
 	char		s2[5] = "tutu";
 	char		*s;
 	s = ft_strcat(s1, s2);
-	printf("\ts1: %s\n\ts2: %s\n\tresult: %s\n", s1, s2, s);
+	printf("\ts1: %s\ts2: %s\tresult: %s\n", s1, s2, s);
+	s = ft_strcat(s1, NULL);
+	printf("\ts1: %s\ts2: NULL\tresult: %s\n", s1, s);
+	s = ft_strcat(NULL, s2);
+	printf("\ts1: NULL\ts2: %s\tresult: %s\n", s2, s);
+	s = ft_strcat(NULL, NULL);
+	printf("\ts1: NULL\ts2: NULL\tresult: %s\n", s);
 
 	printf("\nTEST ft_touplow\n");
 	i = 32;
 	while (i < 127)
 	{
-		printf("\tvalue: %c\ttoup: %c\ttolow: %c\n", i, ft_toupper(i), ft_tolower(i));
+		printf("\tvalue: %c\ttoup: %c\ttolow: %c", i, ft_toupper(i), ft_tolower(i));
+		if (i % 3 == 0)
+			printf("\n");
 		i++;
 	}
+	printf("\n");
 	return (0);
 }
