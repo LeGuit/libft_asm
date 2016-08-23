@@ -6,7 +6,7 @@
 /*   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 18:17:16 by gwoodwar          #+#    #+#             */
-/*   Updated: 2016/08/22 19:57:48 by gwoodwar         ###   ########.fr       */
+/*   Updated: 2016/08/23 15:33:25 by gwoodwar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int				main(void)
 	int			ret;
 	int			i = 0;
 
-	printf("TEST is_\n");
+	printf("TEST ft_is\n");
 	while (i < 8)
 	{
 		printf("\tvalue |%c|\n", test_is[i]);
@@ -46,6 +46,10 @@ int				main(void)
 	printf("\tft_strlen real value: 14 return value %d\n", ret);
 	ret = ft_strlen("");
 	printf("\tft_strlen real value: 0 return value %d\n", ret);
-	//ft_puts("test ft_puts\n"); BUS ERROR
+	
+	printf("\nTEST ft_puts\n");
+	ft_puts("toto tata tutu");
+	ft_puts("");
+	ft_puts(NULL);
 	return (0);
 }
