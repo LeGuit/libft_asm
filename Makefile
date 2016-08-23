@@ -6,7 +6,7 @@
 #    By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/16 14:16:17 by gwoodwar          #+#    #+#              #
-#    Updated: 2016/08/23 17:54:37 by gwoodwar         ###   ########.fr        #
+#    Updated: 2016/08/23 18:29:09 by gwoodwar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,8 +32,8 @@ LIST =	ft_is_in_range \
 		ft_puts \
 		ft_strlen \
 		ft_memset \
-		ft_memcpy 
-		#ft_strdup
+		ft_memcpy \
+		ft_strdup
 
 SRCS := $(addprefix $(SRCS_DIR)/, $(addsuffix .s, $(LIST)))
 OBJS := $(addprefix $(OBJS_DIR)/, $(addsuffix .o, $(LIST)))

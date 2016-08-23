@@ -6,7 +6,7 @@
 /*   By: gwoodwar <gwoodwar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/22 18:17:16 by gwoodwar          #+#    #+#             */
-/*   Updated: 2016/08/23 18:12:31 by gwoodwar         ###   ########.fr       */
+/*   Updated: 2016/08/23 18:35:02 by gwoodwar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,16 @@ int				main(void)
 	printf("\t%s\n", src);
 	dst = ft_memcpy(dst, src, 8);
 	printf("\t%s\n", dst); // add test
+
+	printf("\nTEST ft_strdup\n");
+	char		*dup;
+
+	printf("\t%s\n", src);
+	dup = ft_strdup(src);
+	printf("\t%s\n", dup);
+	free(dup);
+	dup = ft_strdup(NULL);
+	printf("\tNULL -> %s\n", dup);
 
 	return (0);
 }
