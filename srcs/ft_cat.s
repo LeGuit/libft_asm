@@ -11,10 +11,13 @@
 ;; ************************************************************************** ;;
 
 ;void		ft_cat(size_t fd)
+;1024 buffer size of cat(0)
+;the \n flush the buffer of term in rht read
+
 section .data
 section	.bss
-	.equ			SIZE, 1
-	.lcomm		BUFFER, SIZE
+buffer:
+	resb		512
 
 section .text
 
@@ -23,13 +26,19 @@ extern		ft_puts
 
 ft_cat:
 	enter	0, 0
+	pop		rdi
+	sub		rcx, rcx
 
 .read:
-	pop		rdi
-	mov		rax, 0x2000003 ;syscall read
-	mov		rsi, BUFFER
-	mov		rdx, SIZE
 	cmp		rax, 0
+	je		.end
+	cmp		rax, 13
+	je		.write
+	lea		rsi, [rel buffer]
+	mov		rdx, 512
+	mov		rax, 0x2000003 ;syscall read
+	syscall
+	mov		rcx, rax
 	je		.end
 
 .write:
@@ -43,3 +52,4 @@ ft_cat:
 .end:
 	leave
 	ret
+
